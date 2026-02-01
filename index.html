@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/card-nav.css">
     <link rel="stylesheet" href="css/text-type.css">
+    <link rel="stylesheet" href="css/flip-card.css">
+    <link rel="stylesheet" href="css/laser-theme.css">
 </head>
 
 <body>
@@ -167,6 +169,8 @@
         </div>
     </section>
 
+
+
     <!-- Services Overview Section -->
     <section class="section section-alt" id="services">
         <div class="container">
@@ -175,45 +179,149 @@
                 <p>Comprehensive digital solutions designed to accelerate your business and maximize ROI</p>
             </div>
 
-            <div class="grid grid-4">
-                <div class="card scroll-reveal">
-                    <div class="card-icon">💻</div>
-                    <h3>Web Development</h3>
-                    <p>Lightning-fast, conversion-optimized websites and web applications that captivate users and drive
-                        business results.</p>
-                    <a href="pages/services.html#web-development" class="card-link">
-                        Learn More →
-                    </a>
+            <div class="grid grid-4" style="gap: 20px;">
+                <div class="flip-card scroll-reveal">
+                    <div class="flip-card-content">
+                        <div class="flip-card-back">
+                            <div class="flip-card-back-content card-color-1">
+                                <div class="card-icon">💻</div>
+                                <h3>Web Development</h3>
+                                <p>Lightning-fast custom websites & apps optimized for growth.</p>
+                                <a href="pages/services.html#web-development" class="card-link">Learn More →</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-front">
+                            <div class="img img-web-dev">
+                                <div class="circle"></div>
+                                <div class="circle" id="right"></div>
+                                <div class="circle" id="bottom"></div>
+                            </div>
+                            <div class="front-content">
+                                <small class="badge">Development</small>
+                                <div class="description">
+                                    <div class="title">
+                                        <p class="title">
+                                            <strong>Web Development</strong>
+                                        </p>
+                                    </div>
+                                    <p class="card-footer">
+                                        Websites & Apps &nbsp; | &nbsp; High Performance
+                                    </p>
+                                    <a href="pages/services.html#web-development"
+                                        style="color: var(--color-primary-light); font-size: 12px; display: block; margin-top: 8px;">Learn
+                                        More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card scroll-reveal">
-                    <div class="card-icon">🎨</div>
-                    <h3>Graphic Design</h3>
-                    <p>Stunning visual identities and brand assets that make your business unforgettable and build
-                        instant credibility.</p>
-                    <a href="pages/services.html#graphic-design" class="card-link">
-                        Learn More →
-                    </a>
+                <div class="flip-card scroll-reveal">
+                    <div class="flip-card-content">
+                        <div class="flip-card-back">
+                            <div class="flip-card-back-content card-color-2">
+                                <div class="card-icon">🎨</div>
+                                <h3>Graphic Design</h3>
+                                <p>Stunning brand identities that build trust and credibility.</p>
+                                <a href="pages/services.html#graphic-design" class="card-link">Learn More →</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-front">
+                            <div class="img img-design">
+                                <div class="circle"></div>
+                                <div class="circle" id="right"></div>
+                                <div class="circle" id="bottom"></div>
+                            </div>
+                            <div class="front-content">
+                                <small class="badge">Design</small>
+                                <div class="description">
+                                    <div class="title">
+                                        <p class="title">
+                                            <strong>Graphic Design</strong>
+                                        </p>
+                                    </div>
+                                    <p class="card-footer">
+                                        Branding & UI/UX &nbsp; | &nbsp; Creative
+                                    </p>
+                                    <a href="pages/services.html#graphic-design"
+                                        style="color: var(--color-primary-light); font-size: 12px; display: block; margin-top: 8px;">Learn
+                                        More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card scroll-reveal">
-                    <div class="card-icon">📱</div>
-                    <h3>Social Media Management</h3>
-                    <p>Strategic content and community management that turns followers into loyal customers and brand
-                        advocates.</p>
-                    <a href="pages/services.html#social-media" class="card-link">
-                        Learn More →
-                    </a>
+                <div class="flip-card scroll-reveal">
+                    <div class="flip-card-content">
+                        <div class="flip-card-back">
+                            <div class="flip-card-back-content card-color-3">
+                                <div class="card-icon">📱</div>
+                                <h3>Social Media</h3>
+                                <p>Engage your audience and turn followers into customers.</p>
+                                <a href="pages/services.html#social-media" class="card-link">Learn More →</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-front">
+                            <div class="img img-social">
+                                <div class="circle"></div>
+                                <div class="circle" id="right"></div>
+                                <div class="circle" id="bottom"></div>
+                            </div>
+                            <div class="front-content">
+                                <small class="badge">Social Media</small>
+                                <div class="description">
+                                    <div class="title">
+                                        <p class="title">
+                                            <strong>Social Media</strong>
+                                        </p>
+                                    </div>
+                                    <p class="card-footer">
+                                        Management & Growth &nbsp; | &nbsp; Engagement
+                                    </p>
+                                    <a href="pages/services.html#social-media"
+                                        style="color: var(--color-primary-light); font-size: 12px; display: block; margin-top: 8px;">Learn
+                                        More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card scroll-reveal">
-                    <div class="card-icon">📈</div>
-                    <h3>Digital Marketing</h3>
-                    <p>Data-driven campaigns across SEO, PPC, and email that generate qualified leads and maximize your
-                        advertising ROI.</p>
-                    <a href="pages/services.html#digital-marketing" class="card-link">
-                        Learn More →
-                    </a>
+                <div class="flip-card scroll-reveal">
+                    <div class="flip-card-content">
+                        <div class="flip-card-back">
+                            <div class="flip-card-back-content card-color-4">
+                                <div class="card-icon">📈</div>
+                                <h3>Digital Marketing</h3>
+                                <p>Data-driven campaigns that maximize your ROI.</p>
+                                <a href="pages/services.html#digital-marketing" class="card-link">Learn More →</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-front">
+                            <div class="img img-marketing">
+                                <div class="circle"></div>
+                                <div class="circle" id="right"></div>
+                                <div class="circle" id="bottom"></div>
+                            </div>
+                            <div class="front-content">
+                                <small class="badge">Marketing</small>
+                                <div class="description">
+                                    <div class="title">
+                                        <p class="title">
+                                            <strong>Digital Marketing</strong>
+                                        </p>
+                                    </div>
+                                    <p class="card-footer">
+                                        SEO & PPC &nbsp; | &nbsp; ROI Focused
+                                    </p>
+                                    <a href="pages/services.html#digital-marketing"
+                                        style="color: var(--color-primary-light); font-size: 12px; display: block; margin-top: 8px;">Learn
+                                        More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -325,7 +433,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
         <div class="footer-wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path
@@ -422,9 +531,24 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/card-nav.js"></script>
     <script src="js/text-type.js"></script>
+    <script type="module">
+        import { initLaserBackground } from './js/laser-flow.js';
+
+        // Initialize the effect
+        // Using requestAnimationFrame to ensure DOM is ready and Three.js is loaded
+        function start() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => initLaserBackground('main-footer'));
+            } else {
+                initLaserBackground('main-footer');
+            }
+        }
+        start();
+    </script>
 </body>
 
 </html>

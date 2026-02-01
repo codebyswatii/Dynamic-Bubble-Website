@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <link rel="stylesheet" href="../css/card-nav.css">
     <link rel="stylesheet" href="../css/text-type.css">
+    <link rel="stylesheet" href="../css/laser-theme.css">
 </head>
 
 <body>
@@ -550,15 +551,15 @@
             <div class="scroll-reveal">
                 <h2>Ready to Partner With Us?</h2>
                 <p>Join the growing community of successful startups who trust us with their digital presence.</p>
-                <a href="contact.html" class="btn btn-lg" style="background-color: white; color: var(--color-primary);">
-                    Let's Build Something Amazing
+                <a href="contact.html" class="btn btn-lg btn-white">
+                    <span>Let's Build Something Amazing</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="main-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -606,6 +607,21 @@
     <script src="../js/script.js"></script>
     <script src="../js/card-nav.js"></script>
     <script src="../js/text-type.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module">
+        import { initLaserBackground } from '../js/laser-flow.js';
+
+        // Initialize the effect
+        // Using requestAnimationFrame to ensure DOM is ready and Three.js is loaded
+        function start() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => initLaserBackground('main-footer'));
+            } else {
+                initLaserBackground('main-footer');
+            }
+        }
+        start();
+    </script>
 </body>
 
 </html>

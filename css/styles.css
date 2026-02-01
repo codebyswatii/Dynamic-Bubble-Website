@@ -278,54 +278,99 @@ a:hover {
    Buttons - Enhanced with Gradients
    =================================== */
 
+/* ===================================
+   Buttons - Enhanced with Uiverse Animation
+   =================================== */
+
 .btn {
     display: inline-block;
     padding: 1rem 2.25rem;
     font-size: var(--font-size-base);
     font-weight: 600;
     text-align: center;
-    border-radius: var(--radius-full);
-    cursor: pointer;
-    transition: all var(--transition-base);
-    border: none;
-    text-decoration: none;
-    font-family: var(--font-family);
+    border-radius: 9999px;
+    /* Updated to full radius */
+    border: 1px solid #03045e;
     position: relative;
     overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    background: transparent;
+    /* Default bg */
+    color: #03045e;
+    /* Default text color */
+    text-decoration: none;
+    font-family: var(--font-family);
+    cursor: pointer;
+    line-height: normal;
+    /* Fix alignment */
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, #9B7EDE 0%, #7C3AED 100%);
-    color: var(--color-white);
-    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
-}
-
-.btn-primary::before {
+/* Pseudo-elements for the slide animation */
+.btn::before,
+.btn::after {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
-    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
-    opacity: 0;
-    transition: opacity var(--transition-base);
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.5);
-    color: var(--color-white);
+.btn::before {
+    left: -10px;
+    background: #240046;
 }
 
-.btn-primary:hover::before {
-    opacity: 1;
+.btn::after {
+    right: -10px;
+    background: #5a189a;
 }
 
-.btn-primary>* {
+/* Hover effects */
+.btn:hover::before,
+.btn:hover::after {
+    width: 58%;
+}
+
+.btn:hover {
+    color: #ffffff;
+    border-color: #240046;
+    /* Optional: match border to hover bg */
+}
+
+.btn:hover span {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.btn span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
+
+/* Specific button variants */
+/* Specific button variants */
+.btn-white {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-white span {
+    color: #ffffff;
+}
+
+.btn-white:hover {
+    border-color: #240046;
+}
+
+/* Removed legacy .btn-primary styles to support new animation */
 
 .btn-secondary {
     background-color: transparent;
@@ -612,7 +657,7 @@ a:hover {
 }
 
 .benefit-item:hover {
-    background: var(--color-bg-alt);
+    background: #F3F0FF;
     transform: translateX(8px);
 }
 
@@ -663,7 +708,7 @@ a:hover {
 }
 
 .process-step:hover {
-    background: var(--color-bg-alt);
+    background: #F3F0FF;
     transform: scale(1.05);
 }
 
@@ -1265,6 +1310,12 @@ a:hover {
 
     .container {
         padding: 0 var(--spacing-md);
+    }
+
+    .hero {
+        padding-top: 10rem;
+        /* Increased top padding for better spacing */
+        min-height: auto;
     }
 }
 

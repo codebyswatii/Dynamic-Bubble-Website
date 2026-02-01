@@ -1,0 +1,54 @@
+/* Laser Background Customizations for Footer */
+#main-footer {
+    position: relative;
+    overflow: hidden;
+    background-color: #060010 !important;
+    /* Force dark background */
+    padding-top: 100px;
+    /* Ensure space for content */
+}
+
+/* Ensure content sits above the laser canvas */
+#main-footer .container,
+#main-footer .footer-wave {
+    position: relative;
+    z-index: 2;
+}
+
+/* Update text colors to be visible on dark background */
+#main-footer h3,
+#main-footer h4,
+#main-footer p,
+#main-footer a,
+#main-footer li {
+    color: #ffffff !important;
+    /* color: #E9E5FF; */
+}
+
+#main-footer h3 {
+    background: linear-gradient(135deg, #FFFFFF 0%, #C4B5FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#main-footer .footer-links a {
+    color: #d1d5db !important;
+}
+
+#main-footer .footer-links a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Adjust the SVG wave to blend or standout - making it subtle */
+#main-footer .footer-wave svg path {
+    fill: #060010;
+    /* Match bg color to make it look like a cutout or just hide it */
+    opacity: 0.1;
+}
+
+/* Divider colors */
+#main-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -21,6 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <link rel="stylesheet" href="../css/card-nav.css">
     <link rel="stylesheet" href="../css/text-type.css">
+    <link rel="stylesheet" href="../css/laser-theme.css">
 </head>
 
 <body>
@@ -259,8 +260,7 @@
                         <li style="color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;">✓ 30 days of free support</li>
                         <li style="color: rgba(255,255,255,0.95);">✓ 2-week delivery</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-lg"
-                        style="background-color: white; color: var(--color-primary);">Start Your Web Project →</a>
+                    <a href="contact.html" class="btn btn-lg btn-white"><span>Start Your Web Project →</span></a>
                 </div>
             </div>
         </div>
@@ -329,8 +329,7 @@
                         <li style="color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;">✓ Unlimited revisions</li>
                         <li style="color: rgba(255,255,255,0.95);">✓ All source files included</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-lg"
-                        style="background-color: white; color: var(--color-primary);">Transform Your Brand →</a>
+                    <a href="contact.html" class="btn btn-lg btn-white"><span>Transform Your Brand →</span></a>
                 </div>
             </div>
         </div>
@@ -403,8 +402,7 @@
                         </li>
                         <li style="color: rgba(255,255,255,0.95);">✓ Cancel anytime</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-lg"
-                        style="background-color: white; color: var(--color-primary);">Grow Your Social Presence →</a>
+                    <a href="contact.html" class="btn btn-lg btn-white"><span>Grow Your Social Presence →</span></a>
                 </div>
             </div>
         </div>
@@ -475,8 +473,7 @@
                         <li style="color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;">✓ Conversion optimization</li>
                         <li style="color: rgba(255,255,255,0.95);">✓ Dedicated account manager</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-lg"
-                        style="background-color: white; color: var(--color-primary);">Scale Your Marketing →</a>
+                    <a href="contact.html" class="btn btn-lg btn-white"><span>Scale Your Marketing →</span></a>
                 </div>
             </div>
         </div>
@@ -535,7 +532,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="main-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -583,6 +580,21 @@
     <script src="../js/script.js"></script>
     <script src="../js/card-nav.js"></script>
     <script src="../js/text-type.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module">
+        import { initLaserBackground } from '../js/laser-flow.js';
+
+        // Initialize the effect
+        // Using requestAnimationFrame to ensure DOM is ready and Three.js is loaded
+        function start() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => initLaserBackground('main-footer'));
+            } else {
+                initLaserBackground('main-footer');
+            }
+        }
+        start();
+    </script>
 </body>
 
 </html>
