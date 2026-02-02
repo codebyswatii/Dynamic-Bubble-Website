@@ -1,0 +1,33 @@
+.text-type {
+    display: inline-block;
+    white-space: normal;
+    position: relative;
+}
+
+.text-type__content {
+    color: inherit;
+}
+
+.text-type__cursor {
+    margin-left: 2px;
+    display: inline-block;
+    opacity: 1;
+    font-weight: 400;
+    animation: blink 1s step-end infinite;
+}
+
+.text-type__cursor.hidden {
+    display: none;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

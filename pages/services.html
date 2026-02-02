@@ -18,31 +18,135 @@
     <title>Our Services - Digital Services Agency</title>
 
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="../css/card-nav.css">
+    <link rel="stylesheet" href="../css/text-type.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <a href="../index.html" class="navbar-brand" aria-label="Home">
-                <img src="../assets/images/dynamic_bubble_logo.jpg" alt="Dynamic Bubble">
-            </a>
+    <!-- Navigation (CardNav) -->
+    <div class="card-nav-container">
+        <nav class="card-nav">
+            <div class="card-nav-top">
+                <div class="hamburger-menu" role="button" aria-label="Toggle menu" tabindex="0">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
 
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+                <div class="logo-container">
+                    <a href="../index.html">
+                        <img src="../assets/images/dynamic_bubble_logo.jpg" alt="Dynamic Bubble" class="logo">
+                    </a>
+                </div>
 
-            <ul class="navbar-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html" class="btn btn-primary" style="padding: 0.625rem 1.5rem;">Get Started</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                <a href="contact.html" class="card-nav-cta-button">
+                    Get Started
+                </a>
+            </div>
+
+            <div class="card-nav-content">
+                <!-- Card 1: Explore -->
+                <div class="nav-card" style="background-color: #0D0716; color: #fff;">
+                    <div class="nav-card-label">Explore</div>
+                    <div class="nav-card-links">
+                        <a class="nav-card-link" href="../index.html" aria-label="Home">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
+                            </svg>
+                            Home
+                        </a>
+                        <a class="nav-card-link" href="about.html" aria-label="About Us">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            About Us
+                        </a>
+                        <a class="nav-card-link" href="services.html" aria-label="Services">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                            Services
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Services -->
+                <div class="nav-card" style="background-color: #170D27; color: #fff;">
+                    <div class="nav-card-label">Services</div>
+                    <div class="nav-card-links">
+                        <a class="nav-card-link" href="services.html#web-development" aria-label="Web Development">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            Web Dev
+                        </a>
+                        <a class="nav-card-link" href="services.html#graphic-design" aria-label="Graphic Design">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                </path>
+                            </svg>
+                            Design
+                        </a>
+                        <a class="nav-card-link" href="services.html#social-media" aria-label="Social Media">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                            </svg>
+                            Social Media
+                        </a>
+                        <a class="nav-card-link" href="services.html#digital-marketing" aria-label="Digital Marketing">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            Digital Marketing
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 3: Connect -->
+                <div class="nav-card" style="background-color: #271E37; color: #fff;">
+                    <div class="nav-card-label">Connect</div>
+                    <div class="nav-card-links">
+                        <a class="nav-card-link" href="contact.html" aria-label="Contact Us">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            Contact Us
+                        </a>
+                        <a class="nav-card-link" href="mailto:dynamicbubbleinfo@gmail.com" aria-label="Email">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            Email
+                        </a>
+                        <a class="nav-card-link" href="https://www.linkedin.com/company/dynamic-bubble/" target="_blank"
+                            aria-label="LinkedIn">
+                            <svg class="nav-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <!-- Page Header -->
     <section class="hero" style="padding: 4rem 0;">
@@ -479,6 +583,8 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script src="../js/card-nav.js"></script>
+    <script src="../js/text-type.js"></script>
 </body>
 
 </html>
