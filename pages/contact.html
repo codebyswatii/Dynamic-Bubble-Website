@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="../css/card-nav.css">
     <link rel="stylesheet" href="../css/text-type.css">
     <link rel="stylesheet" href="../css/contact-input.css">
-    <link rel="stylesheet" href="../css/laser-theme.css">
+
+ 
 </head>
 
 <body>
@@ -164,7 +165,7 @@
     <!-- Contact Section -->
     <section class="section section-alt">
         <div class="container">
-            <div class="grid grid-2" style="gap: 4rem; align-items: start;">
+            <div class="grid grid-2">
                 <!-- Contact Form -->
                 <div class="scroll-reveal">
                     <h2>Get Your Free Consultation</h2>
@@ -458,21 +459,7 @@
     <script src="../js/script.js"></script>
     <script src="../js/card-nav.js"></script>
     <script src="../js/text-type.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script type="module">
-        import { initLaserBackground } from '../js/laser-flow.js';
-
-        // Initialize the effect
-        // Using requestAnimationFrame to ensure DOM is ready and Three.js is loaded
-        function start() {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => initLaserBackground('main-footer'));
-            } else {
-                initLaserBackground('main-footer');
-            }
-        }
-        start();
-    </script>
+    
     
     <!-- Contact Form Email Handler -->
     <script>
@@ -611,6 +598,7 @@ ${formData.message}
             });
         });
     </script>
+    
 </body>
 
 </html>

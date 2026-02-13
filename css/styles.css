@@ -1440,24 +1440,49 @@ a:hover {
     box-shadow: var(--shadow-lg);
 }
 
-/* ===================================
 
-.text-center {
-    text-align: center;
+
+.contact-grid{
+  gap:4rem;
+  align-items:start;
 }
 
-.text-primary {
-    color: var(--color-primary);
+@media (max-width: 900px){
+  .contact-grid{
+    gap:2rem;
+  }
 }
 
-.mb-0 {
-    margin-bottom: 0;
+*,*::before,::after {
+  box-sizing: border-box;
 }
 
-.mt-xl {
-    margin-top: var(--spacing-xl);
+input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;         
+  max-width: 100%;
 }
 
-.hidden {
-    display: none;
+
+/* Allow flex & grid children to shrink */
+.container,
+.grid,
+.grid > *,
+.flex,
+.flex > * {
+  min-width: 0;
+}
+section {
+  overflow-x: hidden;
+}
+
+
+html, body { overflow-x: clip; }
+.btn { isolation: isolate; }
+
+.contact-details a {
+    overflow-wrap: anywhere;   /* overflow solution */
+    word-break: break-word;    /* fallback */
 }
